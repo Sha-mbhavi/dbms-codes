@@ -1,0 +1,157 @@
+-- 1. CREATE DEPARTMENT TABLE
+CREATE TABLE Department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+-- 2. CREATE PROJECT TABLE
+CREATE TABLE Project (
+    project_id INT PRIMARY KEY,
+    project_name VARCHAR(100) NOT NULL
+);
+
+-- 3. CREATE EMPLOYEE TABLE
+CREATE TABLE Employee (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50) NOT NULL,
+    salary DECIMAL(10,2),
+    dept_id INT,
+    project_id INT,
+    manager_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id),
+    FOREIGN KEY (project_id) REFERENCES Project(project_id)
+);
+
+-- 4. INSERT DEPARTMENT DATA
+INSERT INTO Department VALUES
+(1, 'Development'),
+(2, 'Human Resources'),
+(3, 'Accounting'),
+(4, 'Sales'),
+(5, 'Research');
+
+-- 5. INSERT PROJECT DATA
+INSERT INTO Project VALUES
+(201, 'E-Commerce Website'),
+(202, 'AI Chatbot'),
+(203, 'Database Management'),
+(204, 'Network Security'),
+(205, 'Cloud Computing'),
+(206, 'Smart Home System'),
+(207, 'Business Analytics'),
+(208, 'Online Banking');
+
+-- 6. INSERT EMPLOYEE DATA
+INSERT INTO Employee VALUES
+(1, 'Aarav', 75000, 1, 201, NULL),
+(2, 'Ishita', 68000, 1, 202, 1),
+(3, 'Kabir', 45000, 2, 208, NULL),
+(4, 'Meera', 82000, 3, 203, NULL),
+(5, 'Vivaan', 55000, 4, 206, NULL),
+(6, 'Ananya', 78000, 1, 205, 1),
+(7, 'Advik', 52000, 2, 208, 3),
+(8, 'Diya', 40000, 5, 207, NULL),
+(9, 'Reyansh', 48000, 4, 206, 5),
+(10, 'Saanvi', 61000, 1, 204, 1),
+(11, 'Krishna', 46000, 2, 208, 3),
+(12, 'Myra', 58000, 3, 203, 4),
+(13, 'Arnav', 85000, 1, 201, 1),
+(14, 'Pari', 63000, 5, 207, 8),
+(15, 'Rudra', 57000, 4, 206, 5),
+(16, 'Aadhya', 49000, 3, 203, 4),
+(17, 'Atharv', 53000, 2, 208, 3),
+(18, 'Kiara', 43000, 5, 207, 8),
+(19, 'Dhruv', 72000, 1, 202, 1),
+(20, 'Navya', 59000, 4, 206, 5),
+(21, 'Shaurya', 67000, 3, 203, 4),
+(22, 'Avni', 47000, 2, 208, 3),
+(23, 'Pranav', 56000, 5, 207, 8),
+(24, 'Sara', 64000, 1, 205, 1),
+(25, 'Yuvraj', 71000, 3, 204, 4),
+(26, 'Tara', 51000, 2, 208, 3),
+(27, 'Raghav', 60000, 4, 206, 5),
+(28, 'Ira', 54000, 5, 207, 8),
+(29, 'Ayaan', 69000, 1, 201, 1),
+(30, 'Pihu', 50000, 3, 203, 4);
+
+-- 7. DISPLAY ALL DEPARTMENTS
+SELECT * FROM Department;
+
+-- 8. DISPLAY ALL PROJECTS
+SELECT * FROM Project;
+
+-- 9. DISPLAY ALL EMPLOYEES
+SELECT * FROM Employee;
+
+-- 10. EMPLOYEES EARNING MORE THAN 60000
+SELECT *
+FROM Employee
+WHERE salary > 60000;
+
+-- 11. DISPLAY EMPLOYEE ID, NAME, AND SALARY
+SELECT emp_id, emp_name, salary
+FROM Employee;
+
+-- 12. AGGREGATE FUNCTIONS
+SELECT
+    COUNT(*) AS total_employees,
+    AVG(salary) AS average_salary,
+    MAX(salary) AS highest_salary,
+    MIN(salary) AS lowest_salary,
+    SUM(salary) AS total_salary
+FROM Employee;
+
+-- 13. COUNT EMPLOYEES IN EACH DEPARTMENT
+SELECT
+    dept_id,
+    COUNT(*) AS employee_count
+FROM Employee
+GROUP BY dept_id
+ORDER BY dept_id;
+
+-- 14. DEPARTMENTS WITH AVERAGE SALARY ABOVE 55000
+SELECT
+    dept_id,
+    AVG(salary) AS average_salary
+FROM Employee
+GROUP BY dept_id
+HAVING AVG(salary) > 55000;
+
+-- 15. CLASSIFY EMPLOYEES BY SALARY
+SELECT
+    emp_id,
+    emp_name,
+    salary,
+    CASE
+        WHEN salary >= 70000 THEN 'High'
+        WHEN salary >= 55000 THEN 'Medium'
+        ELSE 'Low'
+    END AS salary_category
+FROM Employee;
+
+-- 16. SORT EMPLOYEES BY SALARY
+SELECT emp_id, emp_name, salary
+FROM Employee
+ORDER BY salary DESC;
+
+-- 17. DEPARTMENT-WISE EMPLOYEE AND SALARY DETAILS
+SELECT
+    d.dept_name,
+    COUNT(e.emp_id) AS total_employees,
+    AVG(e.salary) AS average_salary,
+    SUM(e.salary) AS total_salary
+FROM Department d
+JOIN Employee e
+    ON d.dept_id = e.dept_id
+GROUP BY d.dept_id, d.dept_name
+ORDER BY average_salary DESC;
+
+-- 18. PROJECT-WISE EMPLOYEE COUNT
+SELECT
+    p.project_name,
+    COUNT(e.emp_id) AS employee_count
+FROM Project p
+LEFT JOIN Employee e
+    ON p.project_id = e.project_id
+GROUP BY p.project_id, p.project_name
+ORDER BY employee_count DESC;
