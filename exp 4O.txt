@@ -1,0 +1,209 @@
++--------+----------+-------------+
+| emp_id | emp_name | dept_name   |
++--------+----------+-------------+
+|      1 | Devansh  | Engineering |
+|      2 | Mira     | Engineering |
+|      3 | Ibrahim  | Engineering |
+|      6 | Tanishka | Engineering |
+|     13 | Kunal    | Engineering |
+|     17 | Tia      | Engineering |
+|     19 | Rhea     | Engineering |
+|     24 | Aarohi   | Engineering |
+|      4 | Sanya    | HR          |
+|      9 | Manav    | HR          |
+|     11 | Parth    | HR          |
+|     18 | Om       | HR          |
+|     22 | Kiara    | HR          |
+|     26 | Anika    | HR          |
+|     30 | Pallavi  | HR          |
+|      5 | Neil     | Accounts    |
+|     10 | Zoya     | Accounts    |
+|     14 | Lavanya  | Accounts    |
+|     21 | Samar    | Accounts    |
+|     25 | Farhan   | Accounts    |
+|     29 | Vihaan   | Accounts    |
+|      7 | Ritvik   | Sales       |
+|     12 | Nandini  | Sales       |
+|     15 | Rehan    | Sales       |
+|     20 | Arush    | Sales       |
+|     28 | Simran   | Sales       |
+|      8 | Ayesha   | Logistics   |
+|     16 | Ishaan   | Logistics   |
+|     23 | Yuvan    | Logistics   |
+|     27 | Raghav   | Logistics   |
++--------+----------+-------------+
++--------+----------+-------------+
+| emp_id | emp_name | dept_name   |
++--------+----------+-------------+
+|      1 | Devansh  | Engineering |
+|      2 | Mira     | Engineering |
+|      3 | Ibrahim  | Engineering |
+|      4 | Sanya    | HR          |
+|      5 | Neil     | Accounts    |
+|      6 | Tanishka | Engineering |
+|      7 | Ritvik   | Sales       |
+|      8 | Ayesha   | Logistics   |
+|      9 | Manav    | HR          |
+|     10 | Zoya     | Accounts    |
+|     11 | Parth    | HR          |
+|     12 | Nandini  | Sales       |
+|     13 | Kunal    | Engineering |
+|     14 | Lavanya  | Accounts    |
+|     15 | Rehan    | Sales       |
+|     16 | Ishaan   | Logistics   |
+|     17 | Tia      | Engineering |
+|     18 | Om       | HR          |
+|     19 | Rhea     | Engineering |
+|     20 | Arush    | Sales       |
+|     21 | Samar    | Accounts    |
+|     22 | Kiara    | HR          |
+|     23 | Yuvan    | Logistics   |
+|     24 | Aarohi   | Engineering |
+|     25 | Farhan   | Accounts    |
+|     26 | Anika    | HR          |
+|     27 | Raghav   | Logistics   |
+|     28 | Simran   | Sales       |
+|     29 | Vihaan   | Accounts    |
+|     30 | Pallavi  | HR          |
++--------+----------+-------------+
++--------+----------+--------------+
+| emp_id | emp_name | manager_name |
++--------+----------+--------------+
+|      1 | Devansh  | NULL         |
+|      2 | Mira     | Devansh      |
+|      3 | Ibrahim  | Devansh      |
+|      4 | Sanya    | NULL         |
+|      5 | Neil     | NULL         |
+|      6 | Tanishka | Devansh      |
+|      7 | Ritvik   | NULL         |
+|      8 | Ayesha   | NULL         |
+|      9 | Manav    | Sanya        |
+|     10 | Zoya     | Neil         |
+|     11 | Parth    | Sanya        |
+|     12 | Nandini  | Ritvik       |
+|     13 | Kunal    | Devansh      |
+|     14 | Lavanya  | Neil         |
+|     15 | Rehan    | Ritvik       |
+|     16 | Ishaan   | Ayesha       |
+|     17 | Tia      | Devansh      |
+|     18 | Om       | Sanya        |
+|     19 | Rhea     | Devansh      |
+|     20 | Arush    | Ritvik       |
+|     21 | Samar    | Neil         |
+|     22 | Kiara    | Sanya        |
+|     23 | Yuvan    | Ayesha       |
+|     24 | Aarohi   | Devansh      |
+|     25 | Farhan   | Neil         |
+|     26 | Anika    | Sanya        |
+|     27 | Raghav   | Ayesha       |
+|     28 | Simran   | Ritvik       |
+|     29 | Vihaan   | Neil         |
+|     30 | Pallavi  | Sanya        |
++--------+----------+--------------+
++--------+----------+-------------+------------------+
+| emp_id | emp_name | dept_name   | project_name     |
++--------+----------+-------------+------------------+
+|      1 | Devansh  | Engineering | AI Assistant     |
+|      2 | Mira     | Engineering | Web Portal       |
+|      3 | Ibrahim  | Engineering | Cloud Service    |
+|      4 | Sanya    | HR          | Employee Portal  |
+|      5 | Neil     | Accounts    | Budget Analysis  |
+|      6 | Tanishka | Engineering | AI Assistant     |
+|      7 | Ritvik   | Sales       | Sales Dashboard  |
+|      8 | Ayesha   | Logistics   | Stock Management |
+|      9 | Manav    | HR          | Employee Portal  |
+|     10 | Zoya     | Accounts    | Budget Analysis  |
+|     11 | Parth    | HR          | Employee Portal  |
+|     12 | Nandini  | Sales       | Sales Dashboard  |
+|     13 | Kunal    | Engineering | AI Assistant     |
+|     14 | Lavanya  | Accounts    | Budget Analysis  |
+|     15 | Rehan    | Sales       | Sales Dashboard  |
+|     16 | Ishaan   | Logistics   | Stock Management |
+|     17 | Tia      | Engineering | Cloud Service    |
+|     18 | Om       | HR          | Employee Portal  |
+|     19 | Rhea     | Engineering | Web Portal       |
+|     20 | Arush    | Sales       | Sales Dashboard  |
+|     21 | Samar    | Accounts    | Budget Analysis  |
+|     22 | Kiara    | HR          | Employee Portal  |
+|     23 | Yuvan    | Logistics   | Stock Management |
+|     24 | Aarohi   | Engineering | AI Assistant     |
+|     25 | Farhan   | Accounts    | Budget Analysis  |
+|     26 | Anika    | HR          | Employee Portal  |
+|     27 | Raghav   | Logistics   | Stock Management |
+|     28 | Simran   | Sales       | Sales Dashboard  |
+|     29 | Vihaan   | Accounts    | Budget Analysis  |
+|     30 | Pallavi  | HR          | Employee Portal  |
++--------+----------+-------------+------------------+
++--------+----------+----------+---------+
+| emp_id | emp_name | salary   | dept_id |
++--------+----------+----------+---------+
+|      1 | Devansh  | 72000.00 |       1 |
+|      5 | Neil     | 63000.00 |       3 |
+|      6 | Tanishka | 81000.00 |       1 |
+|     10 | Zoya     | 67000.00 |       3 |
+|     13 | Kunal    | 76000.00 |       1 |
+|     14 | Lavanya  | 65000.00 |       3 |
+|     15 | Rehan    | 59000.00 |       4 |
+|     16 | Ishaan   | 51000.00 |       5 |
+|     19 | Rhea     | 74000.00 |       1 |
+|     20 | Arush    | 62000.00 |       4 |
+|     22 | Kiara    | 50000.00 |       2 |
+|     23 | Yuvan    | 55000.00 |       5 |
+|     24 | Aarohi   | 69000.00 |       1 |
+|     25 | Farhan   | 64000.00 |       3 |
+|     26 | Anika    | 53000.00 |       2 |
+|     28 | Simran   | 60000.00 |       4 |
+|     30 | Pallavi  | 51000.00 |       2 |
++--------+----------+----------+---------+
++---------+-------------+
+| dept_id | dept_name   |
++---------+-------------+
+|       1 | Engineering |
+|       2 | HR          |
+|       3 | Accounts    |
+|       4 | Sales       |
+|       5 | Logistics   |
++---------+-------------+
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|      1 | Devansh  |
+|      2 | Mira     |
+|      3 | Ibrahim  |
+|      6 | Tanishka |
+|     13 | Kunal    |
+|     17 | Tia      |
+|     19 | Rhea     |
+|     24 | Aarohi   |
++--------+----------+
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|      1 | Devansh  |
+|      6 | Tanishka |
+|     13 | Kunal    |
+|     19 | Rhea     |
++--------+----------+
++--------+----------+
+| emp_id | emp_name |
++--------+----------+
+|      1 | Devansh  |
+|      2 | Mira     |
+|      3 | Ibrahim  |
+|     17 | Tia      |
+|     19 | Rhea     |
+|     24 | Aarohi   |
++--------+----------+
++----+-------------+-------+------------+--------+---------------+---------+---------+----------------------------------+------+----------+-------------+
+| id | select_type | table | partitions | type   | possible_keys | key     | key_len | ref                              | rows | filtered | Extra       |
++----+-------------+-------+------------+--------+---------------+---------+---------+----------------------------------+------+----------+-------------+
+|  1 | SIMPLE      | e     | NULL       | ALL    | dept_id       | NULL    | NULL    | NULL                             |   30 |   100.00 | Using where |
+|  1 | SIMPLE      | d     | NULL       | eq_ref | PRIMARY       | PRIMARY | 4       | sandbox_db.e.dept_id             |    1 |   100.00 | NULL        |
++----+-------------+-------+------------+--------+---------------+---------+---------+----------------------------------+------+----------+-------------+
++----+--------------+-------------+------------+--------+---------------------+---------------------+---------+----------------------------------+------+----------+-------------+
+| id | select_type  | table       | partitions | type   | possible_keys       | key                 | key_len | ref                              | rows | filtered | Extra       |
++----+--------------+-------------+------------+--------+---------------------+---------------------+---------+----------------------------------+------+----------+-------------+
+|  1 | SIMPLE       | e           | NULL       | ALL    | dept_id             | NULL                | NULL    | NULL                             |   30 |   100.00 | Using where |
+|  1 | SIMPLE       | <subquery2> | NULL       | eq_ref | <auto_distinct_key> | <auto_distinct_key> | 5       | sandbox_db.e.dept_id             |    1 |   100.00 | NULL        |
+|  2 | MATERIALIZED | Employee    | NULL       | ALL    | dept_id             | NULL                | NULL    | NULL                             |   30 |    33.33 | Using where |
++----+--------------+-------------+----
